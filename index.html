@@ -19,50 +19,83 @@
       rel="icon"
       href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👤</text></svg>"
     />
+    <link rel="stylesheet" href="style.css" />
   </head>
 
   <body>
-    <header>
-      <h1>Stoyanka Kamenova</h1>
-      <p>Web Developer</p>
-      <address>
-        <a href="mailto:stoy@example.com">stoy@example.com</a> |
-        <a href="https://github.com/stoyj">github.com/stoyj</a> | Sofia,
-        Bulgaria
-      </address>
-    </header>
+    <div class="cv-container">
+      <header class="cv-header">
+        <h1>Stoyanka Kamenova</h1>
+        <p>Web Developer</p>
+        <address>
+          <a href="mailto:stoy@example.com">stoy@example.com</a>|
+          <a href="https://github.com/stoyj">github.com/stoyj</a> | Sofia,
+          Bulgaria
+        </address>
+        <button class="btn-download" onclick="window.print()">
+          ⬇ Download CV
+        </button>
+      </header>
 
-    <section>
-      <h2>Skills</h2>
-      <ol>
-        <li>HTML5</li>
-        <li>CSS3</li>
-        <li>JavaScript</li>
-        <li>Git & GitHub</li>
-        <li>Responsive Design</li>
-      </ol>
-    </section>
+      <section class="cv-section">
+        <h2>Skills</h2>
+        <ol class="skills-list">
+          <li class="skill-item">
+            <span class="skill-label">HTML5</span>
+            <div class="skill-bar">
+              <div class="skill-fill" data-width="90"></div>
+            </div>
+          </li>
+          <li class="skill-item">
+            <span class="skill-label">CSS3</span>
+            <div class="skill-bar">
+              <div class="skill-fill" data-width="80"></div>
+            </div>
+          </li>
+          <li class="skill-item">
+            <span class="skill-label">JavaScript</span>
+            <div class="skill-bar">
+              <div class="skill-fill" data-width="65"></div>
+            </div>
+          </li>
+          <li class="skill-item">
+            <span class="skill-label">Git & GitHub</span>
+            <div class="skill-bar">
+              <div class="skill-fill" data-width="75"></div>
+            </div>
+          </li>
+          <li class="skill-item">
+            <span class="skill-label">Responsive Design</span>
+            <div class="skill-bar">
+              <div class="skill-fill" data-width="70"></div>
+            </div>
+          </li>
+        </ol>
+      </section>
 
-    <section>
-      <h2>Education</h2>
-      <article>
-        <h3>Self-taught — Web Development</h3>
-        <p>2024 — present</p>
-        <p>HTML, CSS, JavaScript, React, Git</p>
-      </article>
-    </section>
+      <section class="cv-section">
+        <h2>Education</h2>
+        <div class="cv-article">
+          <h3>Self-taught — Web Development</h3>
+          <p class="date">2024 — present</p>
+          <p>HTML, CSS, JavaScript, React, Git</p>
+        </div>
+      </section>
 
-    <section>
-      <h2>Work Experience</h2>
-      <article>
-        <h3>Frontend Developer — Freedom Projectz</h3>
-        <p><time datetime="2024">2024</time> — present</p>
-        <p>Building a nonprofit website using HTML, CSS and JavaScript.</p>
-      </article>
-    </section>
+      <section class="cv-section">
+        <h2>Work Experience</h2>
+        <div class="cv-article">
+          <h3>Frontend Developer — Freedom Projectz</h3>
+          <p class="date"><time datetime="2024">2024</time> — present</p>
+          <p>Building a nonprofit website using HTML, CSS and JavaScript.</p>
+        </div>
+      </section>
 
-    <footer>
-      <p>© 2026 Stoyanka Kamenova</p>
-    </footer>
+      <footer class="cv-footer">
+        <p>© 2026 Stoyanka Kamenova</p>
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
   </body>
 </html>

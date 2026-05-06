@@ -1,0 +1,170 @@
+/* ===== RESET & BASE =====
+   БГ: Премахваме браузърните стилове по подразбиране.
+   EN: Remove default browser styles. */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===== Typography & COLORS =====
+   БГ: Дефинираме цветовете и шрифтовете на едно място — CSS Variables.
+   EN: Define colors and fonts in one place — CSS Variables. */
+:root {
+  --color-bg: #f8f9fa;
+  --color-white: #ffffff;
+  --color-accent: #2563eb;
+  --color-text: #1e293b;
+  --color-text-light: #64748b;
+  --color-border: #e2e8f0;
+  --font-main: "Segoe UI", sans-serif;
+}
+
+body {
+  font-family: var(--font-main);
+  background: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.6;
+}
+
+/* ===== LAYOUT =====
+   БГ: Центрираме съдържанието и ограничаваме ширината.
+   EN: Center content and limit width. */
+.cv-container {
+  max-width: 860px;
+  margin: 2rem auto;
+  background: var(--color-white);
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+
+/* ===== HEADER ===== */
+.cv-header {
+  background: var(--color-accent);
+  color: white;
+  padding: 2.5rem 3rem;
+}
+
+.cv-header h1 {
+  font-size: 2.2rem;
+  margin-bottom: 0.3rem;
+}
+
+.cv-header p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+  margin-bottom: 1rem;
+}
+
+.cv-header address {
+  font-style: normal;
+  font-size: 0.9rem;
+  opacity: 0.85;
+}
+
+.cv-header a {
+  color: white;
+  text-decoration: none;
+}
+
+.cv-header a:hover {
+  text-decoration: underline;
+}
+
+/* ===== SECTIONS ===== */
+.cv-section {
+  padding: 2rem 3rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.cv-section h2 {
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--color-accent);
+  margin-bottom: 1.2rem;
+}
+
+/* ===== SKILLS ===== */
+.skills-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.skill-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.skill-label {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.skill-bar {
+  height: 8px;
+  background: var(--color-border);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.skill-fill {
+  height: 100%;
+  background: var(--color-accent);
+  border-radius: 4px;
+  width: 0%;
+  transition: width 1s ease;
+}
+
+/* ===== ARTICLE CARDS ===== */
+.cv-article {
+  margin-bottom: 1.2rem;
+}
+
+.cv-article h3 {
+  font-size: 1rem;
+  color: var(--color-text);
+}
+
+.cv-article time,
+.cv-article .date {
+  font-size: 0.85rem;
+  color: var(--color-text-light);
+}
+
+.cv-article p {
+  font-size: 0.95rem;
+  margin-top: 0.3rem;
+}
+
+/* ===== FOOTER ===== */
+.cv-footer {
+  padding: 1.2rem 3rem;
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--color-text-light);
+}
+
+/* ===== DOWNLOAD BUTTON ===== */
+.btn-download {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.5rem 1.2rem;
+  background: white;
+  color: var(--color-accent);
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  font-size: 0.9rem;
+  transition: opacity 0.2s;
+}
+
+.btn-download:hover {
+  opacity: 0.85;
+}
